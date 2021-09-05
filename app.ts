@@ -1,36 +1,37 @@
-import { existsSync } from "https://deno.land/std/fs/mod.ts";
-import { crawlCategoryUrls } from "./crawlUrls.ts";
+// import { existsSync } from "https://deno.land/std/fs/mod.ts";
+// import { crawlCategoryUrls } from "./crawlUrls.ts";
 
-import { crawlItemPage } from "./items.ts";
+// import { crawlItemPage } from "./items.ts";
 
-import IItem from "./types/item.ts";
+import { crawlAllSetItems, crawlSetPage } from "./crawlers/setItems.ts";
+
 async function app() {
   try {
-    let urls: string[];
-    // create/read list of urls to crawl
-    if (existsSync("urls.json")) {
-      const file = Deno.readTextFileSync("urls.json");
-      urls = JSON.parse(file);
-    } else {
-      urls = await crawlCategoryUrls();
-    }
+    // const setItems = await crawlAllSetItems();
+    crawlSetPage(
+      "https://diablo2.diablowiki.net",
+      "/Aldur's_Watchtower",
+      "Aldur's Watchtower"
+    );
+    // console.log("set items: ", setItems);
+    // let urls: string[];
+    // // create/read list of urls to crawl
+    // if (existsSync("urls.json")) {
+    //   const file = await Deno.readTextFile("urls.json");
+    //   urls = JSON.parse(file);
+    // } else {
+    //   urls = await crawlCategoryUrls();
+    // }
 
-    const items: Array<IItem | null> = [];
+    // const asyncItems = urls.map((url) => {
+    //   return crawlItemPage("https://diablo2.diablowiki.net", url);
+    // });
 
-    const asyncItems = urls.map((url) => {
-      return crawlItemPage("https://diablo2.diablowiki.net", url);
-    });
+    // const items = (await Promise.all(asyncItems)).filter((i) => i !== null);
 
-    await Promise.all(asyncItems).then((item) => {
-      item.forEach((i) => {
-        if (i) {
-          items.push(i);
-        }
-      });
-    });
-    Deno.writeTextFileSync("items.json", JSON.stringify(items), {
-      create: true,
-    });
+    // await Deno.writeTextFile("items.json", JSON.stringify(items), {
+    //   create: true,
+    // });
 
     // This works but not the general one
     // const item: IItem | null = await crawlItemPage(

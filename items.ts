@@ -4,6 +4,8 @@ import {
   Text,
 } from "https://deno.land/x/deno_dom@v0.1.12-alpha/deno-dom-wasm.ts";
 
+import { exists } from "https://deno.land/std/fs/mod.ts";
+
 import IItem, {
   TAffix,
   TInventorySize,
@@ -60,8 +62,15 @@ export async function crawlItemPage(
   suburl: string
 ): Promise<IItem | null> {
   try {
-    const res = await fetch(host + suburl);
-    const html = await res.text();
+    const fileExists = await exists(`items/${suburl}`);
+    if (!fileExists) {
+      const res = await fetch(host + suburl);
+      if (res.status === 200) {
+        const html = await res.text();
+        await Deno.writeTextFile(`items/${suburl}`, html, { create: true });
+      }
+    }
+    const html = await Deno.readTextFile(`items/${suburl}`);
 
     const doc = new DOMParser().parseFromString(html, "text/html");
 

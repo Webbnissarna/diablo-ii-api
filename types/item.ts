@@ -28,4 +28,5 @@ export default interface IItem {
   affixes?: Array<TAffix>;
   requirements?: Array<TRequirement> | null;
   spellsImpacted?: Array<string>;
+  usableBy?: string;
 }
