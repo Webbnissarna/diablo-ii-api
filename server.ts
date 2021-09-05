@@ -10,7 +10,8 @@ import types from "./types/types.graphql.ts";
 import Item, { TAffix, TInventorySize, TRequirement } from "./types/item.ts";
 
 //Data
-const items = JSON.parse(Deno.readTextFileSync("items.json")) as Array<Item>;
+const data = await Deno.readTextFile("items.json");
+const items = JSON.parse(data) as Array<Item>;
 
 const app = new Application();
 
