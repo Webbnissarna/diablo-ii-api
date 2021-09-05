@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Arcanna's Deathwand (Diablo II)",
+    "itemStats": [
+      { "name": "Melee Damage", "value": "12 - 28" },
+      { "name": "Weapon Speed", "value": "20" },
+      { "name": "Range", "value": "2" },
+      { "name": "Damage Bonus", "value": "100 Str" }
+    ],
+    "ilvl": 0,
+    "affixes": [
+      { "name": "25% Deadly Strike", "value": 25 },
+      { "name": "+1 to Sorceress Skills", "value": 1 }
+    ],
+    "durability": 100,
+    "inventorySize": { "x": 2, "y": 3 },
+    "requirements": []
+  },
+  {
+    "name": "Arcanna's Head (Diablo II)",
+    "itemStats": [{ "name": "Defense", "value": "9-10" }],
+    "ilvl": 0,
+    "affixes": [
+      { "name": "Replenish Life +4", "value": 4 },
+      { "name": "Attacker Takes Damage of 2", "value": 2 }
+    ],
+    "durability": 36,
+    "inventorySize": { "x": 2, "y": 2 },
+    "requirements": []
+  },
+  {
+    "name": "Cow King's Hide",
+    "itemStats": [{ "name": "Defense", "value": "57" }],
+    "ilvl": 20,
+    "affixes": [
+      { "name": "+60% Enhanced Defense", "value": 60 },
+      {
+        "name": "18% Chance to Cast Level 5 Chain Lightning When Struck",
+        "value": 18
+      },
+      { "name": "+18% to All Resistances", "value": 18 },
+      { "name": "+30 to Life", "value": 30 }
+    ],
+    "durability": 32,
+    "inventorySize": { "x": 2, "y": 3 },
+    "requirements": []
+  },
+  {
+    "name": "Cow King's Hooves",
+    "itemStats": [{ "name": "Defense", "value": "30-41" }],
+    "ilvl": 20,
+    "affixes": [
+      { "name": "+25-35 Defense", "value": 25 },
+      { "name": "+30% Faster Run/Walk", "value": 30 },
+      { "name": "+25-35 Fire Damage", "value": 25 },
+      { "name": "+20 to Dexterity", "value": 20 },
+      { "name": "25% Better Chance of Getting Magic Items", "value": 25 }
+    ],
+    "durability": 14,
+    "inventorySize": { "x": 2, "y": 2 },
+    "requirements": []
+  },
+  {
+    "name": "Naj's Circlet",
+    "itemStats": [{ "name": "Defense", "value": "95-105" }],
+    "ilvl": 43,
+    "affixes": [
+      { "name": "+75 Defense", "value": 75 },
+      { "name": "+25-35 Fire Damage", "value": 25 },
+      {
+        "name": "12% Chance to Cast Level 5 Chain Lightning When Struck",
+        "value": 12
+      },
+      { "name": "+15 to Strength", "value": 15 },
+      { "name": "+5 to Light Radius", "value": 5 }
+    ],
+    "durability": 35,
+    "inventorySize": { "x": 2, "y": 2 },
+    "requirements": []
+  },
+  {
+    "name": "Trang-Oul's Girth",
+    "itemStats": [{ "name": "Defense", "value": "130-166" }],
+    "ilvl": 32,
+    "affixes": [
+      { "name": "+75-100 Defense", "value": 75 },
+      { "name": "+30 Stamina", "value": 30 },
+      { "name": "+5 Replenish Life (0.488 LPS)", "value": 5 },
+      { "name": "+66 Life", "value": 66 },
+      { "name": "Cannot be Frozen", "value": 0 },
+      { "name": "-40% Item Requirements", "value": 40 },
+      { "name": "+25-50 Mana", "value": 25 },
+      { "name": "3 items: +40%Cold Resist", "value": 3 }
+    ],
+    "durability": 18,
+    "inventorySize": { "x": 2, "y": 2 },
+    "requirements": []
+  }
+]

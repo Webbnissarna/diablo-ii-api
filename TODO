@@ -1,0 +1,5 @@
+Scrape all items
+  if an url does not succeed save it to a "failed list"
+  depending on the size, the rest can be added manually
+  in future scrapes, this list can be used to filter out unnecessary/different urls
+
